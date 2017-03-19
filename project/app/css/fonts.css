@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "Source Sans Bold"; /* Гарнитура шрифта */
+    src: url(../fonts/SourceSansProBold.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: "Source Sans Light"; /* Гарнитура шрифта */
+    src: url(../fonts/SourceSansProLight.ttf); /* Путь к файлу со шрифтом */
+}
