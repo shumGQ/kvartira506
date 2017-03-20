@@ -82,7 +82,14 @@
 
 .mfp-hide {
   display: none !important; }
-
+.white-popup {
+    position: relative;
+    background: #FFF;
+    padding: 20px;
+    width: auto;
+    max-width: 500px;
+    margin: 20px auto;
+}
 .mfp-preloader {
   color: #CCC;
   position: absolute;

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+  <section class="scheme">
+      <div class="container">
+        <div class="item hall">
+          <div class="door door-to-balcony"></div>
+          <div class="door door-entrance"></div>
+          <div class="window"></div>
+          <p>Зал 18,8 м<sup>2</sup></p>
+          <p class="photo-link"> 
+            <a class="image-popup-zoom" title="Это описание изображения с анимацией" href="#" id="go">
+            Фото</a>
+          </p>
+        </div>
+        <div class="item balcony">
+          <div class="window"></div>
+          <p>Балкон 5м<sup>2</sup></p>
+        </div>
+        <div class="item hallway">
+          <div class="door door-main"></div>
+          <p>Прихожая 10м<sup>2</sup></p>
+        </div>
+        <div class="item kitchen">
+          <div class="window"></div>
+          <div class="door"></div>
+          <p>Кухня 7,9м<sup>2</sup></p>
+        </div>
+        <div class="item bedroom">
+          <div class="window"></div>
+          <div class="door"></div>
+          <p>Спальня 10,6м <sup>2</sup></p>
+        </div>
+        <div class="item corridor"></div>
+        <div class="item bathroom">
+          <div class="door"></div>
+          <p>Ванна</p>
+        </div>
+        <div class="item wc">
+          <div class="door"></div>
+          <p>WC</p>
+        </div>
+        <div class="legend">
+          <div class="window">
+            <p>Окно</p>
+          </div>
+          <div class="door">
+            
+          </div>
+          <p>Дверь</p>
+        </div>
+      </div>
+  </section>
+  <div class="div">
+    <h1>Схема квартиры с фотографиями</h1>
+  </div>  
+  <div id="modal_form"><!-- Сaмo oкнo --> 
+      <span id="modal_close">X</span> <!-- Кнoпкa зaкрыть --> 
+      <!-- Тут любoе сoдержимoе -->
+      <img src="img/flat2.jpg" alt="">
+  </div>
+  <div id="overlay"></div><!-- Пoдлoжкa -->
+  <script
+        src="http://code.jquery.com/jquery-3.2.0.slim.min.js"
+        integrity="sha256-qLAv0kBAihcHZLI3fv3WITKeRsUX27hd6upBBa0MSow="
+        crossorigin="anonymous"></script>
+  <script src="js/common.js"></script>
+</body>
+</html>

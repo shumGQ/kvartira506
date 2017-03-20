@@ -281,7 +281,209 @@ header {
 .scheme figcaption {
   text-align: center;
 }
-
+.scheme .container {
+  position: relative;
+  margin-top: 50px;
+  min-height: 500px;
+}
+.scheme .container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.scheme .item {
+  position: absolute;
+  border: 2px solid black;
+  cursor: pointer;
+  transition-duration: .5s;
+}
+.scheme .item:hover {
+  transform: scale(1.02);
+  z-index: 2;
+}
+.scheme .item p {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  font-size: 1.5em;
+}
+.scheme .item p.photo-link {
+  top: 40px;
+}
+.white-popup {
+    position: relative;
+    background: #FFF;
+    padding: 20px;
+    width: auto;
+    max-width: 500px;
+    margin: 20px auto;
+}
+.scheme .hall {
+  top: 105px;
+  left: 0;
+  width: 220px;
+  height: 410px;
+  background-color: #EFAC65;
+}
+.scheme .balcony {
+  top: 30px;
+  left: 0;
+  width: 420px;
+  height: 75px;
+  background-color: #95F9D7;
+}
+.scheme .hallway {
+  top: 345px;
+  left: 220px;
+  width: 200px;
+  height: 170px;
+  background-color: #0C8F5F;
+}
+.scheme .kitchen {
+  top: 107px;
+  left: 220px;
+  width: 200px;
+  height: 238px;
+  background-color: #E3E139;
+}
+.scheme .bedroom {
+  top: 0;
+  left: 422px;
+  width: 235px;
+  height: 215px;
+  background-color: #F9DDFC;
+}
+.scheme .corridor {
+  top: 215px;
+  left: 422px;
+  width: 130px;
+  height: 190px;
+  background-color: #B2FDFC;
+}
+.scheme .bathroom {
+  top: 215px;
+  left: 552px;
+  width: 105px;
+  height: 125px;
+  background-color: #0DDEF1;
+}
+.scheme .wc {
+  top: 340px;
+  left: 552px;
+  width: 105px;
+  height: 65px;
+  background-color: #4175EA;
+}
+.scheme .door {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-top: 3px solid #8AA508;
+  border-right: 3px solid #8AA508;
+  z-index: 3;
+  overflow: hidden;
+}
+.scheme .door:before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: -55px;
+  width: 100px;
+  height: 101px;
+  border: 1px solid red;
+  border-radius: 50%;
+}
+.scheme .hall .door-to-balcony {
+  right: 20px;
+  top: 0;
+}
+.scheme .hall .door-entrance {
+  bottom: 80px;
+  right: 0;
+  transform: rotate(90deg);
+}
+.scheme .hallway .door-main {
+  bottom: 30px;
+  right: -53px;
+  transform: rotate(-90deg);
+}
+.scheme .kitchen .door {
+  bottom: -2px;
+  left: 10px;
+  transform: rotate(180deg);
+}
+.scheme .wc .door {
+  transform: rotate(90deg);
+  bottom: 5px;
+  left: -53px;
+}
+.scheme .bathroom .door {
+  transform: rotate(0deg);
+  top: 5px;
+  left: -53px;
+}
+.scheme .bedroom .door {
+  bottom: 0;
+  left: 10px;
+  transform: rotate(180deg);
+}
+.scheme .window {
+  position: absolute;
+  width: 100px;
+  height: 10px;
+  border: 1px solid #8AA508;
+  background-color: #00F6FF;
+  z-index: 3;
+}
+.scheme .hall .window {
+  right: 73px;
+  top: -6px;
+}
+.scheme .balcony .window {
+  left: 10px;
+  top: -7px;
+  width: 385px;
+}
+.scheme .kitchen .window {
+  left: 20px;
+  top: -7px;
+  width: 160px;
+}
+.scheme .bedroom .window {
+  left: 50px;
+  top: -7px;
+  width: 130px;
+}
+.scheme .legend {
+  position: absolute;
+  left: 800px;
+}
+.scheme .legend .window {
+  left: 0;
+  top: 50px;
+}
+.scheme .legend .window:before,
+.scheme .legend .window:after {
+  position: absolute;
+  top: 4px;
+  left: -30px;
+  display: block;
+  content: '';
+  width: 30px;
+  height: 2px;
+  background-color: #000;
+} 
+.scheme .legend .window:after {
+  left: 100px;
+}
+.scheme .legend .door {
+  left: 0;
+  top: 100px;
+}
+.scheme .legend .door ~ p {
+  position: absolute;
+  top: 140px;
+}
 .main-footer {
   position: relative;
   width: 100%;
@@ -313,4 +515,47 @@ header {
 .main-footer .text p:last-child {
   padding-bottom: 50px;
   margin-bottom: 0;
+}
+
+
+#modal_form {
+  width: 300px; 
+  height: 300px; /* Рaзмеры дoлжны быть фиксирoвaны */
+  border-radius: 5px;
+  border: 3px #000 solid;
+  background: #fff;
+  position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+  top: 45%; /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+  left: 50%; /* пoлoвинa экрaнa слевa */
+  margin-top: -150px;
+  margin-left: -150px; /* тут вся мaгия центрoвки css, oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo =) */
+  display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+  opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+  z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+  padding: 20px 10px;
+}
+/* Кнoпкa зaкрыть для тех ктo в тaнке) */
+#modal_form #modal_close {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  display: block;
+}
+/* Пoдлoжкa */
+#overlay {
+  z-index:3; /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
+  position:fixed; /* всегдa перекрывaет весь сaйт */
+  background-color:#000; /* чернaя */
+  opacity:0.8; /* нo немнoгo прoзрaчнa */
+  -moz-opacity:0.8; /* фикс прозрачности для старых браузеров */
+  filter:alpha(opacity=80);
+  width:100%; 
+  height:100%; /* рaзмерoм вo весь экрaн */
+  top:0; /* сверху и слевa 0, oбязaтельные свoйствa! */
+  left:0;
+  cursor:pointer;
+  display:none; /* в oбычнoм сoстoянии её нет) */
 }
