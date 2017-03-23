@@ -284,6 +284,8 @@ header {
 .scheme .container {
   position: relative;
   margin-top: 50px;
+  margin-bottom: 130px;
+  margin-left: 150px;
   min-height: 500px;
 }
 .scheme .container:after {
@@ -309,14 +311,6 @@ header {
 }
 .scheme .item p.photo-link {
   top: 40px;
-}
-.white-popup {
-    position: relative;
-    background: #FFF;
-    padding: 20px;
-    width: auto;
-    max-width: 500px;
-    margin: 20px auto;
 }
 .scheme .hall {
   top: 105px;
@@ -459,8 +453,8 @@ header {
   left: 800px;
 }
 .scheme .legend .window {
-  left: 0;
-  top: 50px;
+  left: -250px;
+  top: 550px;
 }
 .scheme .legend .window:before,
 .scheme .legend .window:after {
@@ -477,12 +471,16 @@ header {
   left: 100px;
 }
 .scheme .legend .door {
-  left: 0;
-  top: 100px;
+  left: -200px;
+  top: 450px;
 }
 .scheme .legend .door ~ p {
   position: absolute;
-  top: 140px;
+  top: 490px;
+  left: -200px;
+}
+.scheme .preview {
+  width: 50px;
 }
 .main-footer {
   position: relative;
