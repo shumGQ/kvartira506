@@ -4,7 +4,8 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglifyjs'),
     cssnano = require('gulp-cssnano'),
-    rename = require('gulp-rename');
+    rename = require('gulp-rename'),
+    wiredep = require('wiredep').stream;
 
 gulp.task('mytask', function() {
 	console.log('Привет!');
@@ -43,9 +44,18 @@ gulp.task('css-libs', ['sass'], function() {
   .pipe(gulp.dest('app/css/'));
 });
 
+gulp.task('bower', function() {
+  gulp.src('./app/index.html')
+    .pipe(wiredep({
+      directory : "app/libs"
+    }))
+    .pipe(gulp.dest('./app'));
+});
+
 gulp.task('watch', ['browser-sync', 'css-libs', 'scripts'], function() {
   gulp.watch('app/sass/**/*.sass', ['sass']);
   gulp.watch('app/*.html', browserSync.reload);
   gulp.watch('app/css/style.css', browserSync.reload);
   gulp.watch('app/js/**/*.js', browserSync.reload);
+  gulp.watch('bower.json', ['bower']);
 });
